@@ -1,0 +1,55 @@
+# This is an auto-generated Django model module.
+# You'll have to do the following manually to clean this up:
+#   * Rearrange models' order
+#   * Make sure each model has one field with primary_key=True
+#   * Make sure each ForeignKey has `on_delete` set to the desired behavior.
+#   * Remove `managed = False` lines if you wish to allow Django to create, modify, and delete the table
+# Feel free to rename the models, but don't rename db_table values or field names.
+from django.db import models
+
+
+class Hsm01(models.Model):
+    h1tbno = models.IntegerField(db_column='H1TBNO', blank=True, null=True)  # Field name made lowercase.
+    h1apdt = models.BigIntegerField(db_column='H1APDT', blank=True, null=True)  # Field name made lowercase.
+    h1aptm = models.IntegerField(db_column='H1APTM', blank=True, null=True)  # Field name made lowercase.
+    h1apdp = models.TextField(db_column='H1APDP', blank=True, null=True)  # Field name made lowercase.
+    h1apps = models.IntegerField(db_column='H1APPS', blank=True, null=True)  # Field name made lowercase.
+    h1apc1 = models.TextField(db_column='H1APC1', blank=True, null=True)  # Field name made lowercase.
+    h1txc1 = models.TextField(db_column='H1TXC1', blank=True, null=True)  # Field name made lowercase.
+    h1apc2 = models.TextField(db_column='H1APC2', blank=True, null=True)  # Field name made lowercase.
+    h1txc2 = models.TextField(db_column='H1TXC2', blank=True, null=True)  # Field name made lowercase.
+    h1prd1 = models.IntegerField(db_column='H1PRD1', blank=True, null=True)  # Field name made lowercase.
+    h1prt1 = models.IntegerField(db_column='H1PRT1', blank=True, null=True)  # Field name made lowercase.
+    h1prd2 = models.IntegerField(db_column='H1PRD2', blank=True, null=True)  # Field name made lowercase.
+    h1prt2 = models.IntegerField(db_column='H1PRT2', blank=True, null=True)  # Field name made lowercase.
+    h1hwtm = models.FloatField(db_column='H1HWTM', blank=True, null=True)  # Field name made lowercase.
+    h1swtm = models.FloatField(db_column='H1SWTM', blank=True, null=True)  # Field name made lowercase.
+    h1prps = models.IntegerField(db_column='H1PRPS', blank=True, null=True)  # Field name made lowercase.
+    h1stdt = models.IntegerField(db_column='H1STDT', blank=True, null=True)  # Field name made lowercase.
+    h1sttm = models.IntegerField(db_column='H1STTM', blank=True, null=True)  # Field name made lowercase.
+
+    class Meta:
+        managed = False
+        db_table = 'HSM01'
+
+
+class Hsm01Form(models.Model):
+    form_id = models.AutoField(primary_key=True)
+    form_description = models.CharField(max_length=60)
+
+    class Meta:
+        managed = False
+        db_table = 'HSM01_form'
+        unique_together = (('form_id', 'form_description'),)
+
+
+class Hsm02(models.Model):
+    h2tbno = models.IntegerField(db_column='H2TBNO', blank=True, null=True)  # Field name made lowercase.
+    field_h2tbsq_field = models.IntegerField(db_column='"H2TBSQ"', blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters. Field renamed because it started with '_'. Field renamed because it ended with '_'.
+    field_h2prtx_field = models.TextField(db_column='"H2PRTX"', blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters. Field renamed because it started with '_'. Field renamed because it ended with '_'.
+    field_h2prcd_field = models.TextField(db_column='"H2PRCD"', blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters. Field renamed because it started with '_'. Field renamed because it ended with '_'.
+    field_h2prtm_field = models.IntegerField(db_column='"H2PRTM"', blank=True, null=True)  # Field name made lowercase. Field renamed to remove unsuitable characters. Field renamed because it started with '_'. Field renamed because it ended with '_'.
+
+    class Meta:
+        managed = False
+        db_table = 'HSM02'
