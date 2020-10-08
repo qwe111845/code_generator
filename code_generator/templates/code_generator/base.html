@@ -62,10 +62,10 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">動作:</h6>
-            <a class="collapse-item" href="{% url 'code_generator:index'%}">新增</a>
-            <a class="collapse-item" href="{% url 'code_generator:index'%}">查詢</a>
-            <a class="collapse-item" href="{% url 'code_generator:index'%}">修改</a>
-            <a class="collapse-item" href="{% url 'code_generator:index'%}">刪除</a>
+            <a class="collapse-item" href="{% url 'code_generator:create_code'%}">新增</a>
+            <a class="collapse-item" href="{% url 'code_generator:search_code'%}">查詢</a>
+            <a class="collapse-item" href="{% url 'code_generator:update_code'%}">修改</a>
+            <a class="collapse-item" href="{% url 'code_generator:delete_code'%}">刪除</a>
           </div>
         </div>
       </li>
@@ -79,16 +79,14 @@
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">資料:</h6>
-            <a class="collapse-item" href="{% url 'code_generator:index'%}">幼稚園</a>
-
+            <a class="collapse-item" href="{% url 'code_generator:create_code'%}">新增</a>
+            <a class="collapse-item" href="{% url 'code_generator:search_code'%}">查詢</a>
+            <a class="collapse-item" href="{% url 'code_generator:update_code'%}">修改</a>
+            <a class="collapse-item" href="{% url 'code_generator:delete_code'%}">刪除</a>
           </div>
         </div>
       </li>
       <!-- Divider -->
-      <hr class="sidebar-divider">
-      <div class="sidebar-heading">
-        檔案
-      </div>
 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
@@ -195,7 +193,7 @@
   <!-- Page level custom scripts -->
   <script src="{% static 'code_generator/js/demo/chart-area-demo.js' %}"></script>
   <script src="{% static 'code_generator/js/demo/chart-pie-demo.js' %}"></script>
-
+  {% block javascript %} {% endblock %}
 </body>
 
 </html>

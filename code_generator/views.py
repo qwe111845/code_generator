@@ -7,6 +7,7 @@ from django.views.decorators.csrf import csrf_protect
 from django.contrib.auth.models import User
 from django.db.models import Sum
 
+
 # Create your views here.
 
 
@@ -21,28 +22,42 @@ def logout(request):
     return HttpResponseRedirect('/code_generator/login/')
 
 
-def index(request):
+def create_code(request, field_number=0):
     if request.method == 'GET':
         if request.user is not None and request.user.is_superuser:
-            return render(request, 'code_generator/index.html')
+            if field_number == 0:
+                return render(request, 'code_generator/create_code.html')
+            else:
+                pass
 
 
-def index(request):
+def search_code(request, field_number=0):
     if request.method == 'GET':
         if request.user is not None and request.user.is_superuser:
-            return render(request, 'code_generator/index.html')
+            if field_number == 0:
+                return render(request, 'code_generator/search_code.html')
+            else:
+                pass
 
 
-def index(request):
+def update_code(request, field_number=0):
     if request.method == 'GET':
         if request.user is not None and request.user.is_superuser:
-            return render(request, 'code_generator/index.html')
+            if field_number == 0:
+                return render(request, 'code_generator/update_code.html')
+            else:
+                pass
 
 
-def index(request):
+def delete_code(request, field_number=0):
     if request.method == 'GET':
         if request.user is not None and request.user.is_superuser:
-            return render(request, 'code_generator/index.html')
+            if field_number == 0:
+                return render(request, 'code_generator/delete_code.html')
+            else:
+                pass
+
+
 # 404 page ############################################################################################
 
 

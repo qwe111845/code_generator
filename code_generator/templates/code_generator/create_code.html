@@ -1,12 +1,36 @@
-{% extends "schedule_courses/base.html" %}
+{% extends "code_generator/base.html" %}
 {% load static %}
 {% block title %} blank {% endblock %}
 {% block content %}
-        <div class="container-fluid">
+    <div class="container-fluid">
 
-          <!-- Page Heading -->
-          <h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
+      <!-- Page Heading -->
+      <h5 class="mb-4 text-gray-800">SQL代碼: </h5>
+      <form id="form">
+          <input type="text" class="form-control col-12" value="" placeholder="請輸入:"/>
+          <br>
+          <input type="button" class="btn btn-info" onclick="addField();" value="增加欄位"/>
+          <input type="button" class="btn btn-info" onclick="deleteField();" value="減少欄位"/>
 
-        </div>
-        <!-- /.container-fluid -->
+
+
+
+      </form>
+    </div>
+    <!-- /.container-fluid -->
+{% endblock %}
+{% block javascript %}
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        var fieldNumber = 1;
+        function addField(){
+            fieldNumber++;
+            console.log(fieldNumber);
+        }
+        function deleteField(){
+            fieldNumber--;
+            console.log(fieldNumber);
+        }
+
+    </script>
 {% endblock %}
